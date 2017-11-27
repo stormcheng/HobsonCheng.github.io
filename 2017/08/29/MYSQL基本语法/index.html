@@ -5,11 +5,12 @@
   
 
 
-<html class="theme-next pisces use-motion" lang="zh-Hans">
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head>
   <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
 
@@ -32,8 +33,8 @@
 
 
 
-<meta name="baidu-site-verification" content="aaLSE2wfvv" />
- />
+
+  <meta name="baidu-site-verification" content="true" />
 
 
 
@@ -48,38 +49,27 @@
 
 
 
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
 
 
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
 
-<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+<link href="/css/main.css?v=" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png?v=">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=" color="#222">
+
+
+
 
 
   <meta name="keywords" content="MYSQL," />
@@ -87,11 +77,6 @@
 
 
 
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.1" />
 
 
 
@@ -104,13 +89,13 @@
 <meta property="og:url" content="http://hobson.top/2017/08/29/MYSQL基本语法/index.html">
 <meta property="og:site_name" content="HobsonCheng的博客">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://hobson.top/images/mysql.jpeg">
+<meta property="og:image" content="http://hobson.top/images/mysql.png">
 <meta property="og:image" content="http://hobson.top/images/table.png">
 <meta property="og:image" content="http://hobson.top/images/RD14CR4LFE07AWJ1_UMQ@A.png">
-<meta property="og:updated_time" content="2017-09-26T03:13:16.000Z">
+<meta property="og:updated_time" content="2017-11-27T14:37:06.712Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MYSQL基本语法">
-<meta name="twitter:image" content="http://hobson.top/images/mysql.jpeg">
+<meta name="twitter:image" content="http://hobson.top/images/mysql.png">
 
 
 
@@ -118,10 +103,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false,"onmobile":false},
+    scheme: 'Gemini',
+    version: '',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
     fancybox: true,
-    motion: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     duoshuo: {
       userId: '0',
       author: '博主'
@@ -164,12 +151,6 @@
 
 
 
-
-
-
-
-
-
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -179,7 +160,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -225,6 +206,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-categories">
           <a href="/categories/" rel="section">
             
@@ -245,22 +236,22 @@
         </li>
       
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            标签
-          </a>
-        </li>
-      
-        
         <li class="menu-item menu-item-sitemap">
           <a href="/sitemap.xml" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-sitemap"></i> <br />
             
             站点地图
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
           </a>
         </li>
       
@@ -326,7 +317,11 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://hobson.top/2017/08/29/MYSQL基本语法/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -377,8 +372,8 @@
 
           
             <span class="post-meta-divider">|</span>
-            <span class="page-pv"><i class="fa fa-file-o"></i>阅读数
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
             </span>
           
 
@@ -393,7 +388,7 @@
                   <i class="fa fa-clock-o"></i>
                 </span>
                 
-                  <span class="post-meta-item-text">阅读时长</span>
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
                   5
@@ -408,21 +403,19 @@
       </header>
     
 
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <p><img src="/images/mysql.jpeg" class="full-image"></p>
-<a id="more"></a>
-<h1 id="MYSQL语法"><a href="#MYSQL语法" class="headerlink" title="MYSQL语法"></a>MYSQL语法</h1><blockquote>
-<p>本文主要总结了常用的基本SQL语句，主要包括库操作、表操作、数据操作、注释、中文乱码等问题。</p>
-</blockquote>
-<!--more-->
-<p>[toc]</p>
-<h2 id="库操作"><a href="#库操作" class="headerlink" title="库操作"></a>库操作</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">create database mydatabase charset utf8;</div></pre></td></tr></table></figure>
+        <p><img src="/images/mysql.png" alt="upload successful"><br><a id="more"></a> </p>
+<h1 id="MYSQL语法"><a href="#MYSQL语法" class="headerlink" title="MYSQL语法"></a>MYSQL语法</h1><h2 id="库操作"><a href="#库操作" class="headerlink" title="库操作"></a>库操作</h2><h3 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">create database mydatabase charset utf8;</div></pre></td></tr></table></figure>
 <h3 id="创建中文数据库"><a href="#创建中文数据库" class="headerlink" title="创建中文数据库"></a>创建中文数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">create database 中国 charset utf8;</div><div class="line"></div><div class="line">-- 直接写会报语法错误，解决方案</div><div class="line">set names gbk;</div><div class="line">create database 中国 charset utf8;</div></pre></td></tr></table></figure>
+<!-- more -->
 <h3 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">-- 1.查看所有数据库</div><div class="line">show databases;</div><div class="line">-- 2.查看指定数据库</div><div class="line">show databases like &apos;pattern&apos;; -- parrern是匹配模式</div><div class="line">show databases like &apos;my%&apos;; -- 表示查看以my开头的数据库</div><div class="line">	-- % 表示匹配多个字符</div><div class="line">	-- _ 表示匹配单个字符</div><div class="line">-- 3.查看数据库创建信息</div><div class="line">show create database mydatabase;</div></pre></td></tr></table></figure>
 <h3 id="更新数据库"><a href="#更新数据库" class="headerlink" title="更新数据库"></a>更新数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">-- 数据库名字不能修改</div><div class="line">-- 修改数据库字符集</div><div class="line">alter database mydatabase charset GBK;</div></pre></td></tr></table></figure>
 <h3 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-- 一定要先备份再删除</div><div class="line">drop database mydatabase;</div></pre></td></tr></table></figure>
@@ -468,8 +461,7 @@
 <h3 id="删除表"><a href="#删除表" class="headerlink" title="删除表"></a>删除表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-- 可以一次性删除多张表</div><div class="line">drop table 表名1,表名2...;</div></pre></td></tr></table></figure>
 <h3 id="修改字段"><a href="#修改字段" class="headerlink" title="修改字段"></a>修改字段</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">-- 新增字段</div><div class="line">alter table 表名 add [column] 字段名 数据类型 [列属性][位置];</div><div class="line">	-- 位置：字段名可以存放表中的任意位置</div><div class="line">		-- First：第一个位置</div><div class="line">		-- after 字段名    在某个字段后面添加</div><div class="line">		-- 默认是在最后一个字段后加</div><div class="line">-- 修改字段列属性</div><div class="line">alter table 表名 modify id varchar(3) after hobby;</div><div class="line">alter table my_student modify id varchar(3) after hobby;</div><div class="line">-- 重命名字段</div><div class="line">alter table 表名 change 旧字段名 新字段名 数据类型 [属性][位置];</div><div class="line">-- 删除字段</div><div class="line">alter table 表名 drop 字段名;</div></pre></td></tr></table></figure>
 <h2 id="数据操作"><a href="#数据操作" class="headerlink" title="数据操作"></a>数据操作</h2><h3 id="查看数据"><a href="#查看数据" class="headerlink" title="查看数据"></a>查看数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">-- 查看所有数据</div><div class="line">select * from 表名 [where 条件];</div><div class="line">select * from my_student where id = 1;</div><div class="line">-- 查看指定字段的数据</div><div class="line">select 字段列表 from 表名 [where 条件];</div><div class="line">select id,sex from my_student where id = 1;</div></pre></td></tr></table></figure>
-<p>####新增数据</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-- 1.给全表字段添加数据</div><div class="line">insert into 表名 values(值列表1),(值列表2)...;</div><div class="line">-- 2.给部分字段插入数据</div><div class="line">insert into 表名(字段列表) values(值列表1),(值列表2)...;</div></pre></td></tr></table></figure>
+<h4 id="新增数据"><a href="#新增数据" class="headerlink" title="新增数据"></a>新增数据</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">-- 1.给全表字段添加数据</div><div class="line">insert into 表名 values(值列表1),(值列表2)...;</div><div class="line">-- 2.给部分字段插入数据</div><div class="line">insert into 表名(字段列表) values(值列表1),(值列表2)...;</div></pre></td></tr></table></figure>
 <h3 id="更新数据"><a href="#更新数据" class="headerlink" title="更新数据"></a>更新数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">-- 1.全部修改</div><div class="line">update 表名 set 字段 = 值;</div><div class="line">update my_student set age = 14;</div><div class="line">-- 2.按条件修改</div><div class="line">update 表名 set 字段 = 值 [where 条件];</div><div class="line">update my_student set age = 11 where id = 3;</div></pre></td></tr></table></figure>
 <h3 id="删除数据"><a href="#删除数据" class="headerlink" title="删除数据"></a>删除数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">-- 1.删除所有数据</div><div class="line">delete from 表名;</div><div class="line">delete from my_student;</div><div class="line">-- 2.按条件删除数据</div><div class="line">delete from 表名 where 条件;</div><div class="line">delete from my_student where id = 1;</div></pre></td></tr></table></figure>
 <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p> <code>-- 这是注释内容</code><br> <code># 这是注释内容</code></p>
@@ -499,59 +491,63 @@
 
       
     </div>
+    
+    
+    
 
-    <div>
-      
-        
-<div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
+    
+      <div>
+        <div id="wechat_subscriber" style="display: block; padding: 10px 0; margin: 20px auto; width: 100%; text-align: center">
     <img id="wechat_subscriber_qcode" src="/images/wechat.png" alt="HobsonCheng wechat" style="width: 200px; max-width: 100%;"/>
-    <div>小白一枚，欢迎交流指教。</div>
+    <div>欢迎交流指教</div>
 </div>
 
+      </div>
+    
 
-      
-    </div>
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/images/wechatPay.jpg" alt="HobsonCheng WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/images/alipay.jpg" alt="HobsonCheng Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpg" alt="HobsonCheng 微信支付"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpg" alt="HobsonCheng 支付宝"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+      <div id="bitcoin" style="display: inline-block">
+        <img id="bitcoin_qr" src="/images/bitcoin.png" alt="HobsonCheng 比特币"/>
+        <p>比特币</p>
+      </div>
+    
+
   </div>
+</div>
 
+      </div>
+    
 
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/MYSQL/" rel="tag"><i class="fa fa-tag"></i> MYSQL</a>
+            <a href="/tags/MYSQL/" rel="tag"># MYSQL</a>
           
         </div>
       
@@ -574,8 +570,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/09/16/JavaSE知识总结/" rel="prev" title="JavaSE知识总结（01-基础知识）">
-                JavaSE知识总结（01-基础知识） <i class="fa fa-chevron-right"></i>
+              <a href="/2017/09/16/JavaSE知识总结（02-基本语法1）/" rel="prev" title="JavaSE知识总结（02-基本语法1）">
+                JavaSE知识总结（02-基本语法1） <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -585,38 +581,15 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
 
     <div class="post-spread">
-      
-        
-  <script>
-    window._bd_share_config = {
-      "common": {
-        "bdText": "",
-        "bdMini": "1",
-        "bdMiniList": false,
-        "bdPic": ""
-      },
-      "image": {
-        "viewList": ["tsina", "douban", "sqq", "qzone", "weixin", "twi", "fbook"],
-        "viewText": "分享到：",
-        "viewSize": "16"
-      },
-      "slide": {
-        "bdImg": "5",
-        "bdPos": "left",
-        "bdTop": "100"
-      }
-    }
-  </script>
-
-<script>
-  with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='//bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
-</script>
-
       
     </div>
   </div>
@@ -627,11 +600,11 @@
 
 
           
-  <div class="comments" id="comments">
-    
+  
+    <div class="comments" id="comments">
       <div id="uyan_frame"></div>
-    
-  </div>
+    </div>
+  
 
 
         </div>
@@ -654,86 +627,87 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             文章目录
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             站点概览
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.jpg"
-               alt="HobsonCheng" />
-          <p class="site-author-name" itemprop="name">HobsonCheng</p>
-           
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="HobsonCheng" />
+            
+              <p class="site-author-name" itemprop="name">HobsonCheng</p>
               <p class="site-description motion-element" itemprop="description"></p>
-           
-        </div>
-        <nav class="site-state motion-element">
+          </div>
 
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives/">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">日志</span>
-              </a>
-            </div>
-          
+          <nav class="site-state motion-element">
 
-          
             
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">1</span>
-                <span class="site-state-item-name">分类</span>
-              </a>
-            </div>
-          
-
-          
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">3</span>
-                <span class="site-state-item-name">标签</span>
-              </a>
-            </div>
-          
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/HobsonCheng" target="_blank" title="GitHub">
-                  
-                    <i class="fa fa-fw fa-github"></i>
-                  
-                  GitHub
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
                 </a>
-              </span>
+              </div>
             
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
           
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="hhttps://github.com/HobsonCheng" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
         </div>
-
-        
-        
-
-        
-        
-
-        
-
-
       </section>
 
       
@@ -746,7 +720,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MYSQL语法"><span class="nav-number">1.</span> <span class="nav-text">MYSQL语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#库操作"><span class="nav-number">1.1.</span> <span class="nav-text">库操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建中文数据库"><span class="nav-number">1.1.2.</span> <span class="nav-text">创建中文数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看数据库"><span class="nav-number">1.1.3.</span> <span class="nav-text">查看数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新数据库"><span class="nav-number">1.1.4.</span> <span class="nav-text">更新数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据库"><span class="nav-number">1.1.5.</span> <span class="nav-text">删除数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表操作"><span class="nav-number">1.2.</span> <span class="nav-text">表操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增加数据表"><span class="nav-number">1.2.1.</span> <span class="nav-text">增加数据表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看表"><span class="nav-number">1.2.2.</span> <span class="nav-text">查看表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改表"><span class="nav-number">1.2.3.</span> <span class="nav-text">修改表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除表"><span class="nav-number">1.2.4.</span> <span class="nav-text">删除表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改字段"><span class="nav-number">1.2.5.</span> <span class="nav-text">修改字段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操作"><span class="nav-number">1.3.</span> <span class="nav-text">数据操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看数据"><span class="nav-number">1.3.1.</span> <span class="nav-text">查看数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新数据"><span class="nav-number">1.3.2.</span> <span class="nav-text">更新数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据"><span class="nav-number">1.3.3.</span> <span class="nav-text">删除数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">1.4.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文数据问题"><span class="nav-number">1.5.</span> <span class="nav-text">中文数据问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#校对集问题"><span class="nav-number">1.6.</span> <span class="nav-text">校对集问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web乱码问题"><span class="nav-number">1.7.</span> <span class="nav-text">web乱码问题</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#MYSQL语法"><span class="nav-number">1.</span> <span class="nav-text">MYSQL语法</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#库操作"><span class="nav-number">1.1.</span> <span class="nav-text">库操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建数据库"><span class="nav-number">1.1.1.</span> <span class="nav-text">创建数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#创建中文数据库"><span class="nav-number">1.1.2.</span> <span class="nav-text">创建中文数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看数据库"><span class="nav-number">1.1.3.</span> <span class="nav-text">查看数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新数据库"><span class="nav-number">1.1.4.</span> <span class="nav-text">更新数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据库"><span class="nav-number">1.1.5.</span> <span class="nav-text">删除数据库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#表操作"><span class="nav-number">1.2.</span> <span class="nav-text">表操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#增加数据表"><span class="nav-number">1.2.1.</span> <span class="nav-text">增加数据表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看表"><span class="nav-number">1.2.2.</span> <span class="nav-text">查看表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改表"><span class="nav-number">1.2.3.</span> <span class="nav-text">修改表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除表"><span class="nav-number">1.2.4.</span> <span class="nav-text">删除表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改字段"><span class="nav-number">1.2.5.</span> <span class="nav-text">修改字段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据操作"><span class="nav-number">1.3.</span> <span class="nav-text">数据操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#查看数据"><span class="nav-number">1.3.1.</span> <span class="nav-text">查看数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#新增数据"><span class="nav-number">1.3.1.1.</span> <span class="nav-text">新增数据</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#更新数据"><span class="nav-number">1.3.2.</span> <span class="nav-text">更新数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除数据"><span class="nav-number">1.3.3.</span> <span class="nav-text">删除数据</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注释"><span class="nav-number">1.4.</span> <span class="nav-text">注释</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中文数据问题"><span class="nav-number">1.5.</span> <span class="nav-text">中文数据问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#校对集问题"><span class="nav-number">1.6.</span> <span class="nav-text">校对集问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web乱码问题"><span class="nav-number">1.7.</span> <span class="nav-text">web乱码问题</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -766,27 +740,21 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2016 - 
-  <span itemprop="copyrightYear">2017</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">HobsonCheng</span>
+
+  
 </div>
 
 
-<div class="powered-by">
-  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
-</div>
 
-<div class="theme-info">
-  主题 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Pisces
-  </a>
-</div>
+
+
+
+
 
 
         
@@ -795,7 +763,7 @@
 
   
     <span class="site-uv">
-      <i class="fa fa-user"></i>访问人数
+      <i class="fa fa-user"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
       人
     </span>
@@ -803,12 +771,18 @@
 
   
     <span class="site-pv">
-      <i class="fa fa-eye"></i>总访问量
+      <i class="fa fa-eye"></i>
       <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
       次
     </span>
   
 </div>
+
+
+
+
+
+
 
 
         
@@ -880,32 +854,32 @@
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v="></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.1"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v="></script>
 
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v="></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v="></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v="></script>
+<script type="text/javascript" src="/js/src/post-details.js?v="></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v="></script>
 
 
 
@@ -938,6 +912,8 @@
 
 
   
+
+
 
 
 
@@ -1270,6 +1246,21 @@
   
 
   
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
 
   
 
